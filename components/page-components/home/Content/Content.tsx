@@ -1,5 +1,5 @@
 import React from "react";
-import HeroSection from "../HeroSection/HeroSection";
+import HeroSection from "@/components/reusable/HeroSection/HeroSection";
 import Section from "@/components/reusable/Section/Section";
 import Link from "next/link";
 import Image from "next/image";
