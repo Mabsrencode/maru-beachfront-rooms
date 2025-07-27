@@ -33,7 +33,7 @@ export default function Testimonial() {
         “{testimonials[index].quote}”
       </blockquote>
       <p className="text-lg">{testimonials[index].author}</p>
-      <div className="mt-4 flex justify-center gap-2">
+      <div className="mt-4 flex justify-center gap-6">
         <button
           onClick={prevTestimonial}
           className="bg-primary-light text-white p-2 rounded-md hover:bg-primary cursor-pointer transition"
