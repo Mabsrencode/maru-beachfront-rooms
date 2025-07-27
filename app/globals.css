@@ -3,6 +3,7 @@
 :root {
   --background: #ffffff;
   --primary-color: #617c3c;
+  --primary-light-color: #819d12;
   --secondary-color: #eceda2;
   --accent-color: #e0b973;
   --blue-color: #14274a;
@@ -11,6 +12,7 @@
 @theme inline {
   --color-background: var(--background);
   --color-primary: var(--primary-color);
+  --color-primary-light: var(--primary-light-color);
   --color-secondary: var(--secondary-color);
   --color-accent: var(--accent-color);
   --color-blue: var(--blue-color);
@@ -44,4 +46,9 @@ body {
   height: 2px;
   width: 100%;
   background-color: var(--background);
+}
+.center {
+  top: 90%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
