@@ -54,11 +54,13 @@ const Header = () => {
           </span>
           <span className="text-xs tracking-[2px]">Rooms</span>
         </Link>
-        <nav className="list-none flex items-center gap-12 font-bold lg:text-lg text-white">
+        <nav className="list-none flex items-center gap-12 lg:text-lg text-white">
           {headerLinks.map((link, idx) => (
             <li
               key={idx}
-              className={`relative ${pathname === link.href && "nav-links"}`}
+              className={`relative ${
+                pathname === link.href && "nav-links font-bold"
+              }`}
             >
               <Link href={link.href}>{link.label}</Link>
             </li>

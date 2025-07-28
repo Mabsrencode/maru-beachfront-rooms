@@ -40,7 +40,7 @@ const Content = () => {
             facilities will help you enjoy the best of all.
           </p>
         </div>
-        <div className="mt-24 flex flex-col gap-24">
+        <div className="my-24 flex flex-col gap-24">
           {roomCardContent.map((fac) => (
             <RoomCard key={fac.title} title={fac.title} image={fac.image} />
           ))}

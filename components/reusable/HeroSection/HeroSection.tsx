@@ -26,7 +26,7 @@ const HeroSection = ({
           <h2 className="font-primary text-[11rem] tracking-wider leading-35">
             MARU’S
           </h2>
-          <p className="font-primary text-6xl tracking-[20px]">
+          <p className="font-primary text-6xl tracking-[17px]">
             Beachfront Rooms
           </p>
           <p className="text-[25px] max-w-[680px] tracking-[4px]">
