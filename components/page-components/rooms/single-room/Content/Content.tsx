@@ -1,7 +1,5 @@
 "use client";
-import { CalendarIcon } from "@/components/assets/Icon";
 import Button from "@/components/reusable/Button/Button";
-import Icon from "@/components/reusable/Icon/Icon";
 import Section from "@/components/reusable/Section/Section";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
@@ -84,7 +82,7 @@ const Content = () => {
                 />
               </div>
               <div className="inline-block mt-8">
-                <div className="relative flex items-center border px-6 py-2 border-gray-400 rounded-lg text-md font-semibold text-gray-500">
+                <div className="relative flex items-center border px-8 py-2 border-gray-400 rounded-lg text-md font-semibold text-gray-500">
                   <label className="absolute bg-white text-gray-500 -top-3 px-1 left-2 text-sm mb-1">
                     Pick Room and Guests
                   </label>
@@ -94,11 +92,8 @@ const Content = () => {
               </div>
               <Button
                 handler={() => router.push("/rooms/single-room")}
-                style="flex items-center gap-2 font-bold uppercase text-white mt-6"
+                style="flex items-center gap-2 font-semibold px-6 uppercase text-white mt-6"
               >
-                <Icon size={16}>
-                  <CalendarIcon />
-                </Icon>
                 Book Now
               </Button>
             </div>

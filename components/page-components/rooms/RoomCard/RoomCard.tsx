@@ -22,21 +22,22 @@ const RoomCard = ({
   return (
     <div>
       <div className=" mx-auto overflow-hidden">
-        <div className="relative h-[700px] overflow-hidden">
-          <div className="absolute  h-svh bg-primary opacity-20 w-full z-10"></div>
-
-          <Slider {...settings}>
-            {images.map((src, index) => (
-              <Image
-                key={index}
-                width={1000}
-                height={700}
-                src={src}
-                alt={`Room ${index}`}
-                className="w-full h-full object-cover"
-              />
-            ))}
-          </Slider>
+        <div className="relative h-[700px] ">
+          <div className="absolute h-svh bg-primary opacity-20 w-full z-10"></div>
+          <div className="h-[700px] relative">
+            <Slider {...settings} className="dotdot">
+              {images.map((src, index) => (
+                <Image
+                  key={index}
+                  width={1000}
+                  height={700}
+                  src={src}
+                  alt={`Room ${index}`}
+                  className="w-full h-full object-cover"
+                />
+              ))}
+            </Slider>
+          </div>
         </div>
 
         <div className="relative z-20">

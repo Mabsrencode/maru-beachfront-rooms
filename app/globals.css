@@ -56,7 +56,9 @@ footer::before {
   background: var(--primary-color);
   z-index: -1;
 }
-
+.dotdot .slick-dots {
+  top: 600px !important;
+}
 .slick-dots {
   bottom: 50px !important;
 }
