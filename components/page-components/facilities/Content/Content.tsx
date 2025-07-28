@@ -3,40 +3,47 @@ import Section from "@/components/reusable/Section/Section";
 import React from "react";
 import RoomCard from "../RoomCard/RoomCard";
 import Testimonial from "@/components/reusable/Testimonial/Testimonial";
-const images = [
-  "/assets/rooms/room1.jpg",
-  "/assets/rooms/room2.jpg",
-  "/assets/rooms/room3.jpg",
-];
-const image2 = [
-  "/assets/rooms/room2.jpg",
-  "/assets/rooms/room1.jpg",
-  "/assets/rooms/room3.jpg",
-];
-const image3 = [
-  "/assets/rooms/room3.jpg",
-  "/assets/rooms/room1.jpg",
-  "/assets/rooms/room2.jpg",
+const roomCardContent = [
+  {
+    title: "The Gym",
+    image: "/assets/facilities/facility1.jpg",
+  },
+  {
+    title: "poolside bar",
+    image: "/assets/facilities/facility2.jpg",
+  },
+  {
+    title: "the spa",
+    image: "/assets/facilities/facility3.jpg",
+  },
+  {
+    title: "SWIMMING POOL",
+    image: "/assets/facilities/facility4.jpg",
+  },
+  {
+    title: "RESTAURANT",
+    image: "/assets/facilities/facility5.jpg",
+  },
 ];
 const Content = () => {
   return (
     <>
-      <HeroSection darken />
+      <HeroSection secondImage darken />
       <Section>
         <div className="mx-auto font-primary text-center mt-12 text-black">
-          <h2 className="font-primary text-6xl">ROOMS AND RATES</h2>
+          <h2 className="font-primary text-6xl">FACILITIES</h2>
           <p className="max-w-[1010px] mx-auto mt-4 text-lg font-secondary">
-            Each of our bright, light-flooded rooms come with everything you
-            could possibly need for a comfortable stay. And yes, comfort isn’t
-            our only objective, we also value good design, sleek contemporary
-            furnishing complemented by the rich tones of nature’s palette as
-            visible from our rooms’ sea-view windows and terraces.{" "}
+            We want your stay at our lush hotel to be truly unforgettable. That
+            is why we give special attention to all of your needs so that we can
+            ensure an experience quite uniquw. Luxury hotels offers the perfect
+            setting with stunning views for leisure and our modern luxury resort
+            facilities will help you enjoy the best of all.
           </p>
         </div>
         <div className="mt-24 flex flex-col gap-24">
-          <RoomCard images={images} roomName="Single Room" />
-          <RoomCard images={image2} roomName="DOUBLE ROOM" />
-          <RoomCard images={image3} roomName="TWIN ROOM" />
+          {roomCardContent.map((fac) => (
+            <RoomCard key={fac.title} title={fac.title} image={fac.image} />
+          ))}
         </div>
         <Testimonial />
       </Section>
