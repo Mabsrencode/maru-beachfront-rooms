@@ -3,20 +3,31 @@ import Section from "@/components/reusable/Section/Section";
 import React from "react";
 import RoomCard from "../RoomCard/RoomCard";
 import Testimonial from "@/components/reusable/Testimonial/Testimonial";
-const images = [
-  "/assets/rooms/room1.jpg",
-  "/assets/rooms/room2.jpg",
-  "/assets/rooms/room3.jpg",
-];
-const image2 = [
-  "/assets/rooms/room2.jpg",
-  "/assets/rooms/room1.jpg",
-  "/assets/rooms/room3.jpg",
-];
-const image3 = [
-  "/assets/rooms/room3.jpg",
-  "/assets/rooms/room1.jpg",
-  "/assets/rooms/room2.jpg",
+const roomData = [
+  {
+    title: "single room",
+    images: [
+      "/assets/rooms/room1.jpg",
+      "/assets/rooms/room2.jpg",
+      "/assets/rooms/room3.jpg",
+    ],
+  },
+  {
+    title: "double room",
+    images: [
+      "/assets/rooms/room2.jpg",
+      "/assets/rooms/room1.jpg",
+      "/assets/rooms/room3.jpg",
+    ],
+  },
+  {
+    title: "twin room",
+    images: [
+      "/assets/rooms/room3.jpg",
+      "/assets/rooms/room1.jpg",
+      "/assets/rooms/room2.jpg",
+    ],
+  },
 ];
 const Content = () => {
   return (
@@ -34,9 +45,13 @@ const Content = () => {
           </p>
         </div>
         <div className="mt-24 flex flex-col gap-24">
-          <RoomCard images={images} roomName="Single Room" />
-          <RoomCard images={image2} roomName="DOUBLE ROOM" />
-          <RoomCard images={image3} roomName="TWIN ROOM" />
+          {roomData.map((room) => (
+            <RoomCard
+              key={room.title}
+              images={room.images}
+              roomName={room.title}
+            />
+          ))}
         </div>
         <Testimonial />
       </Section>
