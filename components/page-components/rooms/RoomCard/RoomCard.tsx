@@ -2,7 +2,7 @@
 import React from "react";
 import Slider from "react-slick";
 import { AiFillPlusCircle } from "react-icons/ai";
-import { StaticImageData } from "next/image";
+import Image from "next/image";
 const RoomCard = ({
   roomName,
   images,
@@ -21,16 +21,19 @@ const RoomCard = ({
 
   return (
     <div>
-      <div className=" mx-auto overflow-hidden shadow">
-        <div className="relative">
+      <div className=" mx-auto overflow-hidden">
+        <div className="relative h-[700px] overflow-hidden">
           <div className="absolute  h-svh bg-primary opacity-20 w-full z-10"></div>
+
           <Slider {...settings}>
             {images.map((src, index) => (
-              <img
+              <Image
                 key={index}
+                width={1000}
+                height={700}
                 src={src}
                 alt={`Room ${index}`}
-                className="w-full h-full max-h-[700px] object-cover"
+                className="w-full h-full object-cover"
               />
             ))}
           </Slider>

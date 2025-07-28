@@ -5,7 +5,11 @@ import { BsArrowRight } from "react-icons/bs";
 import Link from "next/link";
 import Button from "@/components/reusable/Button/Button";
 import Section from "@/components/reusable/Section/Section";
-
+type FormData = {
+  name: string;
+  email: string;
+  message: string;
+};
 const Content = () => {
   const [successMessage, setSuccessMessage] = useState<string | null>("");
   const [errorMessage, setErrorMessage] = useState<string | null>("");
@@ -14,9 +18,9 @@ const Content = () => {
     handleSubmit,
     formState: { errors, isSubmitting },
     reset,
-  } = useForm();
+  } = useForm<FormData>();
 
-  const onSubmit = async (data: any) => {
+  const onSubmit = async (data: FormData) => {
     setSuccessMessage(null);
     setErrorMessage(null);
     try {
