@@ -22,7 +22,7 @@ const RoomCard = ({
   return (
     <div>
       <div className=" mx-auto overflow-hidden">
-        <div className="relative h-[700px] ">
+        <div className="relative h-[700px] overflow-hidden">
           <div className="absolute h-svh bg-primary opacity-20 w-full z-10"></div>
           <div className="h-[700px] relative">
             <Slider {...settings} className="dotdot">
