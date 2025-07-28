@@ -1,6 +1,8 @@
+"use client";
 import { ArrowDownIcon, CalendarIcon } from "@/components/assets/Icon";
 import Button from "@/components/reusable/Button/Button";
 import Icon from "@/components/reusable/Icon/Icon";
+import { useRouter } from "next/navigation";
 import React from "react";
 const HeroSection = ({
   secondImage,
@@ -9,6 +11,7 @@ const HeroSection = ({
   secondImage?: boolean;
   darken?: boolean;
 }) => {
+  const router = useRouter();
   return (
     <section className="relative">
       {darken && (
@@ -34,7 +37,10 @@ const HeroSection = ({
             rates.
           </p>
           <div className="mt-16 flex items-center justify-center">
-            <Button style="flex items-center gap-2 font-bold uppercase">
+            <Button
+              handler={() => router.push("/rooms/single-room")}
+              style="flex items-center gap-2 font-bold uppercase"
+            >
               <Icon size={16}>
                 <CalendarIcon />
               </Icon>

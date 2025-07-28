@@ -63,5 +63,19 @@ const ArrowRight = () => {
     </svg>
   );
 };
-
-export { CalendarIcon, ArrowDownIcon, ArrowLeft, ArrowRight };
+const BackIcon = () => {
+  return (
+    <svg
+      className="w-full h-full"
+      viewBox="0 0 25 25"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M5 25L20 25C22.7614 25 25 22.7614 25 20L25 5C25 2.23858 22.7614 0 20 0L5 0C2.23858 0 0 2.23858 0 5L0 20C0 22.7614 2.23858 25 5 25Z"
+        fill="currentColor"
+      />
+    </svg>
+  );
+};
+export { CalendarIcon, ArrowDownIcon, ArrowLeft, ArrowRight, BackIcon };
